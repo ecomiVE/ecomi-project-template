@@ -1,0 +1,55 @@
+# --- Secrets -----------------------------------------------------------------
+# If a secret is ever committed, rotate it. Deleting the commit is not enough.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+service-account*.json
+
+# --- Data --------------------------------------------------------------------
+# Production data never lives in the repository.
+/data/
+*.sqlite
+*.sqlite3
+*.db
+*.csv
+*.parquet
+!**/fixtures/*.csv
+
+# --- Python ------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# --- Node --------------------------------------------------------------------
+node_modules/
+.next/
+.nuxt/
+out/
+coverage/
+*.tsbuildinfo
+.pnpm-store/
+
+# --- Editors and OS ----------------------------------------------------------
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Logs and temp -----------------------------------------------------------
+*.log
+logs/
+tmp/
+.cache/
